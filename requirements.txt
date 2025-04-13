@@ -2,5 +2,5 @@ Flask
 gunicorn
 numpy
 joblib
-tensorflow==2.11.0  # or compatible version
+tensorflow==2.18.0 
 scikit-learn
