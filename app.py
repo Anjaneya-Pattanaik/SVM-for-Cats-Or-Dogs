@@ -4,8 +4,15 @@ import joblib
 import numpy as np
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.applications.vgg16 import preprocess_input
+import os
 
 app = Flask(__name__)
+
+
+# Ensure uploads folder exists
+UPLOAD_FOLDER = 'uploads'
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
 
 # Load models
 vgg16_model = load_model('vgg16_model.h5')
